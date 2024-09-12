@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwgLoader", "DwgLoader.csproj", "{B1B402B6-C274-4198-8053-7AE256BD7BFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1B402B6-C274-4198-8053-7AE256BD7BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B402B6-C274-4198-8053-7AE256BD7BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B402B6-C274-4198-8053-7AE256BD7BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B402B6-C274-4198-8053-7AE256BD7BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CA3EABD-F191-4EA0-B9C6-16AA70F1FE64}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,58 @@
+﻿<Window x:Class="DwgLoader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DwgLoader"
+        mc:Ignorable="d"
+        Title="DWG Loader" Height="600" Width="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="200"/>
+            <!-- Height of the Canvas -->
+        </Grid.RowDefinitions>
+
+        <!-- Menu -->
+        <Menu Grid.Row="0">
+            <MenuItem Header="Soubor">
+                <MenuItem Header="Otevřít" Click="LoadDwgFile_Click"/>
+                <MenuItem Header="Uložit jako DXF" Click="SaveAsDxf_Click"/>
+                <Separator/>
+                <MenuItem Header="Konec" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Zobrazení">
+                <MenuItem Header="Vykreslit všechny vrstvy" Click="DrawAllLayers_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Layer ListBox -->
+            <ListBox x:Name="LayerListBox" Grid.Column="0" SelectionChanged="LayersListBox_SelectionChanged" />
+
+            <!-- Layer Info -->
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Margin="10">
+                <TextBlock x:Name="LayerInfoTextBlock" TextWrapping="Wrap" />
+            </ScrollViewer>
+
+            <!-- Entity ListBox -->
+            <ListBox x:Name="EntityListBox" Grid.Column="2" SelectionChanged="EntityListBox_SelectionChanged"/>
+
+            <!-- Entity Info -->
+            <ScrollViewer Grid.Column="3" VerticalScrollBarVisibility="Auto" Margin="10">
+                <TextBlock x:Name="EntityInfoTextBlock" TextWrapping="Wrap" />
+            </ScrollViewer>
+        </Grid>
+
+        <!-- Canvas for drawing -->
+        <Canvas x:Name="DrawingCanvas" Grid.Row="2" Background="LightGray" />
+    </Grid>
+</Window>
